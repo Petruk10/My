@@ -1,0 +1,36 @@
+body {
+    margin-top: 30px;
+}
+
+.wrapper {
+    width: 600px;
+    margin:0 auto;
+}
+
+
+.i_am {
+    text-align: center;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+img {
+    height: 300px;
+    margin-top: 20px;
+}
+
+.about_me {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
