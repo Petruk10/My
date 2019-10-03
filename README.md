@@ -1,7 +1,7 @@
 # Hubspot form integration with custom multi steps form
-Если Вам нужно сделать многошаговою форму, которая будет отправлять данные в контакты Hubspot, то для начала Вам нужно создать форму в Hubspot Forms, и просто создать там нужные (все) поля, которые должны быть на всех шагах многошаговой формы. 
+If you need to make a multi-step form that will send data to Hubspot contacts, first you need to create a form in Hubspot Forms, and just create the necessary (all) fields there, which should be at all steps of the multi-step form. 
   
-Если у Вас уже есть рабочая многошаговая форма - это хорошо. Но если все-же нет, то Вам или вашему разработчику нужно ее сделать. Можно сделать с помощью ajax, что-бы при переходе на следующий шаг страница не перезагружалась. В моем примере, у меня для каждого шага были созданные html страницы с именем part_0, part_1, part_2 и так далее, было созданно столько, сколько будет шагов формы. 
+If you already have a working multi-step form - that's good. But if not, then you or your developer need to do it. You can do it with ajax so that when you go to the next step, the page does not reload. В моем примере, у меня для каждого шага были созданные html страницы с именем part_0, part_1, part_2 и так далее, было созданно столько, сколько будет шагов формы. 
 
 После того, когда я создал все шаги, с помощью js я сделал переходы между этими шагами. Например на первом шаге у меня есть вопрос и 4 варианта ответа, после клика на любой ответ происходит переход на следующий шаг.
 
