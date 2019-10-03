@@ -45,3 +45,5 @@ $('form').on('click', '.stepLastButton', function (e) {
       $('.hs-button.primary.large').click();
   }
 });
+
+После этого, все должно работать.
