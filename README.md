@@ -1,17 +1,17 @@
 # Hubspot form integration with custom multi steps form
 If you need to make a multi-step form that will send data to Hubspot contacts, first you need to create a form in Hubspot Forms, and just create the necessary (all) fields there, which should be at all steps of the multi-step form. 
   
-If you already have a working multi-step form - that's good. But if not, then you or your developer need to do it. You can do it with ajax so that when you go to the next step, the page does not reload. В моем примере, у меня для каждого шага были созданные html страницы с именем part_0, part_1, part_2 и так далее, было созданно столько, сколько будет шагов формы. 
+If you already have a working multi-step form - that's good. But if not, then you or your developer need to do it. You can do it with ajax so that when you go to the next step, the page does not reload. In my example, for each step I had html pages created with the name part_0, part_1, part_2 and so on, as many steps as the form steps were created. 
 
-После того, когда я создал все шаги, с помощью js я сделал переходы между этими шагами. Например на первом шаге у меня есть вопрос и 4 варианта ответа, после клика на любой ответ происходит переход на следующий шаг.
+After I created all the steps, using js I made the transitions between these steps. For example, in the first step, I have a question and 4 possible answers, after clicking on any answer, the transition to the next step takes place.
 
-Не обязательно делать так, что-бы форма куда-нибудь отправляла данные. Можно просто после клика на кнопку "Отправить", на последнем шаге, сделать всплывающее окно благодарности и очистку полей формы.
+It is not necessary to make the form send the data somewhere. You can simply make a pop-up window of thanks and clear the form fields after clicking on the "Submit" button, at the last step.
 
-Также шаги можно например сделать через слайдер, как вам будет легче и удобнее.
+You can also make steps, for example, through the slider, as it will be easier and more convenient for you.
 
-Теперь нужно начинать интеграцию формы Hubspot с нашей формой.
+Now we need to begin the integration of the Hubspot form with our form.
 
-Для начала нужно в настройках Hubpot формы, в разделе "Стиль и предварительный просмотр", переключиться на "Установить как необработанную форму HTML", что-бы мы могли самостоятельно, с помощью css и js изменять Hubspot форму уже на нашем сайте http://joxi.ru/KAxJloKtZJV6Pm. Далее сохраняем все изменения и копируем код формы к себе на страницу. Желательно вставить код где-то после нашей формы. В дальнейшем мы сделаем ее невидимой, поэтому внешний вид и расположения нас не сильно волнует. 
+First, in the Hubpot settings of the form, in the "Style and Preview" section, switch to "Set as raw HTML form" so that we can independently use css and js to change the Hubspot form already on our website http://joxi.ru/KAxJloKtZJV6Pm. Next, save all the changes and copy the form code to your page. It is advisable to insert the code somewhere after our form. In the future, we will make it invisible, so the appearance and location do not really bother us. 
 
 Далее буду описывать реализацию на своем примере.
 
