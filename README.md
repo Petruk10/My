@@ -13,16 +13,16 @@ Now we need to begin the integration of the Hubspot form with our form.
 
 First, in the Hubpot settings of the form, in the "Style and Preview" section, switch to "Set as raw HTML form" so that we can independently use css and js to change the Hubspot form already on our website http://joxi.ru/KAxJloKtZJV6Pm. Next, save all the changes and copy the form code to your page. It is advisable to insert the code somewhere after our form. In the future, we will make it invisible, so the appearance and location do not really bother us. 
 
-Далее буду описывать реализацию на своем примере.
+Next I will describe the implementation using my example.
 
-У меня на каждом шаге есть 2-4 варианта ответа, то-есть без кнопки для перехода на следующий шаг. Переход происходит при клике на любой из ответов. Каждый ответ у меня сделан с помощью input radio и кастомного label. Переход происходит при смене значения в одном из этих input.
-Для группы input-ов я дал им одинаковый атрибут name=step1, что-бы смотреть на изминение на один из них. Атрибут value также нужно дать всем input, но уже для каждого свое. Именно value будет передаваться в поля Hubspot формы.
+At each step, I have 2-4 answers, that is, without a button to go to the next step. The transition occurs when you click on any of the answers. Each answer is made with input radio and a custom label. A transition occurs when a value changes in one of these input.
+For a group of inputs, I gave them the same attribute name = step1, in order to look at the change in one of them. The value attribute also needs to be given to everyone with input, but for each its own. Namely value will be transferred to the Hubspot fields of the form.
 
-Далее с помощью js, точнее jQuery, пишем событие on change для input. В нем создем переменную и присваиваем ей значение value нашего input. 
+Next, using js, or rather jQuery, we write the on change event for input. In it, create a variable and assign it the value value of our input.
 
-Смотрим теперь на форму Hubspot. Через инспектор находим id input-a, в который нужно передать данные для первого шага. Берем этот id и для его value пишем нашу переменную которую мы написаля выше. В конце нужно написать .change(), что-бы все сработало.
+Now look at the Hubspot form. Through the inspector we find id input-a, into which we need to transfer data for the first step. We take this id and for its value we write our variable which we wrote above. At the end, you need to write .change () to make it work.
 
-Пример моего кода: 
+An example of my code: 
 
     $('form').on('change', 'input[name=step1]', function (e) {
 
@@ -31,12 +31,12 @@ First, in the Hubpot settings of the form, in the "Style and Preview" section, s
   
     });
 
-Если все сделано верно, то в нужном поле формы Hubspot Вы увидите значение того варианта ответа, на которые ви кликнули. 
+If everything is done correctly, then in the necessary field of the Hubspot form you will see the value of the answer option that you clicked on. 
 
-На последнем шаге у меня 4 поля которые нужно заполнить (Имя, фамилия, Телефон, Почта), чек-бокс соглашения политики конфиденциальности и кнопка отправки. Всем полям (кроме чек-бокса), я дал одинаковый класс, что-бы через одно имя класса провериветь все поля.
-Все поля я сделал обязательными, и также в js я прописал проверку на заполненность всех этих полей, при клике на кнопку отправки. Нужно для того, что-бы только после этого у нас передались вместе все данные с этих полей и сработал паралельно клик на кнопку отправки формы Hubspot.
+At the last step, I have 4 fields that need to be filled (Name, Surname, Phone, Mail), a check-box of the privacy policy agreement and a submit button. To all fields (except the checkbox), I gave the same class, so that through one class name I would check all the fields.
+I made all fields mandatory, and also in js I registered a check for completeness of all these fields when I click on the submit button. This is necessary so that only after that we would get all the data from these fields together and click on the submit button of the Hubspot form to work in parallel.
 
-Пример:
+Example:
 
     $('form').on('click', '.stepLastButton', function (e) {
     
@@ -50,4 +50,4 @@ First, in the Hubpot settings of the form, in the "Style and Preview" section, s
       
     });
 
-После этого, все должно работать.
+After that, everything should work.
