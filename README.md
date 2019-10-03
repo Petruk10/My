@@ -39,11 +39,15 @@
 Пример:
 
     $('form').on('click', '.stepLastButton', function (e) {
+    
       if( ($('.input_final').val() !== '')) && ($('input[name="check_box"]').is(':checked')) ) {
+      
         var Name = $('input[name=name]').val();
         $('#firstname-3cedf7a4-fe39-4088-98c7-273b0547d2ab').val(Name).change();
         $('.hs-button.primary.large').click();
+        
       }
+      
     });
 
 После этого, все должно работать.
