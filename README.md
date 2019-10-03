@@ -24,12 +24,12 @@
 
 Пример моего кода: 
 
-$('form').on('change', 'input[name=step1]', function (e) {
+    $('form').on('change', 'input[name=step1]', function (e) {
 
-  var step1 = $(this).val();
-  $('#gesuchter_bereich_hrsv-3cedf7a4-fe39-4088-98c7-273b0547d2ab').val(step1).change();
+      var step1 = $(this).val();
+      $('#gesuchter_bereich_hrsv-3cedf7a4-fe39-4088-98c7-273b0547d2ab').val(step1).change();
   
-});
+    });
 
 Если все сделано верно, то в нужном поле формы Hubspot Вы увидите значение того варианта ответа, на которые ви кликнули. 
 
